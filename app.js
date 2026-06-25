@@ -1,6 +1,6 @@
 'use strict';
 
-const CRY_VIDEO = 'crying_meme.mp4';
+const CRY_VIDEO = 'crying_meme.mp4.mp4';
 
 const $ = id => document.getElementById(id);
 
