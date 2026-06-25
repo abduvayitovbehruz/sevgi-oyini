@@ -12,8 +12,16 @@ const screens = {
 };
 
 function showScreen(name) {
-  Object.values(screens).forEach(s => s.classList.remove('active'));
-  screens[name].classList.add('active');
+    const noBtn = document.getElementById('btn-no');
+    if (name !== 'main' && noBtn) {
+        noBtn.remove();
+    }
+    
+    Object.values(screens).forEach(s => s.classList.remove('active'));
+    screens[name].classList.add('active');
+}
+    setTimeout(() => el.remove(), 6000);
+  }, 1000);
 }
 
 const noBtn      = $('btn-no');
@@ -212,17 +220,4 @@ function spawnFloatingParticles() {
     el.innerHTML = '<path d="M50 85C50 85 5 52 5 28C5 14 14 5 27 5C36 5 44 10 50 18C56 10 64 5 73 5C86 5 95 14 95 28C95 52 50 85 50 85Z" fill="#ffb3cc"/>';
     wrap.appendChild(el);
 
-    function showScreen(name) {
-
-    const noBtn = document.getElementById('btn-no');
-    if (name !== 'main' && noBtn) {
-        noBtn.remove();
-    }
     
-
-    Object.values(screens).forEach(s => s.classList.remove('active'));
-    screens[name].classList.add('active');
-}
-    setTimeout(() => el.remove(), 6000);
-  }, 1000);
-}
