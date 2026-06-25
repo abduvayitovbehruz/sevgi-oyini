@@ -1,6 +1,6 @@
 'use strict';
 
-const CRY_VIDEO = 'crying_meme.mp4.mp4';
+const CRY_VIDEO = '';
 
 const $ = id => document.getElementById(id);
 
@@ -104,7 +104,7 @@ $('btn-confirm-yes').addEventListener('click', () => {
 
 $('btn-confirm-no').addEventListener('click', () => {
   showScreen('cry');
-  if (CRY_VIDEO) window.open(CRY_VIDEO, '_blank');
+  window.open('cry.html', '_blank');
 });
 
 $('btn-restart-cel').addEventListener('click', restart);
