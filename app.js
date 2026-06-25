@@ -211,6 +211,18 @@ function spawnFloatingParticles() {
     el.style.cssText = 'position:fixed;left:'+(Math.random()*100)+'vw;bottom:-20px;pointer-events:none;z-index:0;opacity:0.45;animation:float-heart '+(3+Math.random()*3)+'s linear forwards;';
     el.innerHTML = '<path d="M50 85C50 85 5 52 5 28C5 14 14 5 27 5C36 5 44 10 50 18C56 10 64 5 73 5C86 5 95 14 95 28C95 52 50 85 50 85Z" fill="#ffb3cc"/>';
     wrap.appendChild(el);
+
+    function showScreen(name) {
+    // 1. Agar "confirm", "celebrate" yoki "cry" sahifalariga o'tsa, tugmani o'chirib tashlaymiz
+    const noBtn = document.getElementById('btn-no');
+    if (name !== 'main' && noBtn) {
+        noBtn.remove();
+    }
+    
+    // 2. Sahifalarni almashtirish
+    Object.values(screens).forEach(s => s.classList.remove('active'));
+    screens[name].classList.add('active');
+}
     setTimeout(() => el.remove(), 6000);
   }, 1000);
 }
