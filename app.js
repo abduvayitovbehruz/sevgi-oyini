@@ -213,13 +213,13 @@ function spawnFloatingParticles() {
     wrap.appendChild(el);
 
     function showScreen(name) {
-    // 1. Agar "confirm", "celebrate" yoki "cry" sahifalariga o'tsa, tugmani o'chirib tashlaymiz
+
     const noBtn = document.getElementById('btn-no');
     if (name !== 'main' && noBtn) {
         noBtn.remove();
     }
     
-    // 2. Sahifalarni almashtirish
+
     Object.values(screens).forEach(s => s.classList.remove('active'));
     screens[name].classList.add('active');
 }
