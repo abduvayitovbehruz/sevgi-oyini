@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#ff6b9d" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>Sevgi O'yini</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="particles"></div>
+
+<div class="screen active" id="screen-main">
+  <div class="hearts-deco" id="deco-main"></div>
+  <div class="card">
+    <div class="heart-wrap">
+      <svg class="big-heart pulse" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 85C50 85 5 52 5 28C5 14 14 5 27 5C36 5 44 10 50 18C56 10 64 5 73 5C86 5 95 14 95 28C95 52 50 85 50 85Z"/>
+      </svg>
+      <svg class="big-heart inner pulse-delay" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 82C50 82 12 52 12 30C12 19 19 12 30 12C38 12 45 17 50 24C55 17 62 12 70 12C81 12 88 19 88 30C88 52 50 82 50 82Z"/>
+      </svg>
+    </div>
+    <h1 class="question">Meni sevasanmi,<br><span class="highlight">borlig'im?</span> 💕</h1>
+    <div class="btn-group" id="main-btns">
+      <button class="btn btn-yes" id="btn-yes-main">Albatta, sevaman! 💖</button>
+      <button class="btn btn-no"  id="btn-no">Yo'q</button>
+    </div>
+    <p class="hint" id="escape-hint"></p>
+  </div>
+</div>
+
+<div class="screen" id="screen-confirm">
+  <div class="hearts-deco" id="deco-confirm"></div>
+  <div class="card">
+    <div class="heart-wrap small">
+      <svg class="big-heart pulse" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 85C50 85 5 52 5 28C5 14 14 5 27 5C36 5 44 10 50 18C56 10 64 5 73 5C86 5 95 14 95 28C95 52 50 85 50 85Z"/>
+      </svg>
+    </div>
+    <h1 class="question">Aniqmi? 🥺</h1>
+    <p class="sub">Rostdan ham sevasanmi?</p>
+    <div class="btn-group">
+      <button class="btn btn-yes" id="btn-confirm-yes">Ha, hayotim! 💗</button>
+      <button class="btn btn-gray" id="btn-confirm-no">Yo'q... 😢</button>
+    </div>
+  </div>
+</div>
+
+<div class="screen" id="screen-celebrate">
+  <div id="confetti-wrap"></div>
+  <div class="card celebrate">
+    <div class="heart-wrap">
+      <svg class="big-heart pulse fast" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 85C50 85 5 52 5 28C5 14 14 5 27 5C36 5 44 10 50 18C56 10 64 5 73 5C86 5 95 14 95 28C95 52 50 85 50 85Z"/>
+      </svg>
+      <svg class="big-heart inner pulse-delay fast" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 82C50 82 12 52 12 30C12 19 19 12 30 12C38 12 45 17 50 24C55 17 62 12 70 12C81 12 88 19 88 30C88 52 50 82 50 82Z"/>
+      </svg>
+    </div>
+    <h1 class="question big">Seni sevaman! 💖</h1>
+    <p class="celebrate-text">Dunyodagi eng go'zal so'zlar<br>sening uchun, azizim! 🌸</p>
+    <button class="btn btn-yes" id="btn-restart-cel">Qayta o'ynash 🔄</button>
+  </div>
+</div>
+
+<div class="screen" id="screen-cry">
+  <div class="card cry-card">
+    <div class="cry-emoji">😢</div>
+    <h1 class="question dark">Yuragim sindi...</h1>
+    <p class="sub dark">Video ochilmoqda...</p>
+    <button class="btn btn-pink" id="btn-restart-cry">Qayta boshlash 💔</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
