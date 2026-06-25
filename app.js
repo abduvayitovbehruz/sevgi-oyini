@@ -17,11 +17,9 @@ function showScreen(name) {
         noBtn.remove();
     }
     
+ 
     Object.values(screens).forEach(s => s.classList.remove('active'));
     screens[name].classList.add('active');
-}
-    setTimeout(() => el.remove(), 6000);
-  }, 1000);
 }
 
 const noBtn      = $('btn-no');
